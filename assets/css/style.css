@@ -377,6 +377,7 @@ li {
     align-items: center;
     justify-content: center;
     position: relative;
+    aspect-ratio: 3.5 / 4;
 }
 .header-section__bottom-wrapper::before {
     content: '';
@@ -392,7 +393,7 @@ li {
     z-index: 0;
 }
 .header-section__bottom-image {
-    max-height: 100%;
+    width: 100%;
     position: relative;
     z-index: 1;
 }
