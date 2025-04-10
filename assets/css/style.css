@@ -28,6 +28,16 @@ ul {
 li {
     list-style: none;
 }
+button, 
+a, 
+img,
+.no-select,
+.badge__text {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
 .wrapper {
     display: flex;
     flex-direction: column;
