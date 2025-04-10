@@ -52,8 +52,8 @@
                                 <span class="section-text__line">new Starbucks coffee and don't forget about the discount!</span>
                             </p>
                             <div class="header-section__buttons">
-                                <button class="section-button section-button--gradient">Select a coffee</button>
-                                <button class="section-button section-button--black"><span>More</span></button>
+                                <a href="#products" class="section-button section-button--gradient">Select a coffee</a>
+                                <a class="section-button section-button--black"><span>More</span></a>
                             </div>
                             <ul class="section-statistic__list">
                                 <li class="section-statistic__item">
@@ -221,7 +221,7 @@
                                     <source srcset="assets/images/preview-image.webp" type="image/webp">
                                     <img src="assets/images/preview-image.jpg" alt="Preview video" class="video-block__preview" loading="lazy">
                                 </picture>
-                                <button class="video-block__button section-button section-button--gradient" id="openModal">
+                                <button class="video-block__button section-button section-button--gradient" data-video="https://www.youtube.com/embed/CMmFG-GXNZ0" id="openModal">
                                     <img src="assets/images/triangle-button.png" alt="Triangle" class="video-block__button-triangle" loading="lazy">
                                     <span>Cooking Process</span>
                                 </button>
@@ -230,7 +230,7 @@
                     </div>
                 </div>
             </section>
-            <section class="products-section">
+            <section class="products-section" id="products">
                 <div class="container">
                     <div class="product-content">
                         <h1 class="section-title">New Our <span class="section-title__line section-title__line--gradient">Products</span></h1>
@@ -528,7 +528,7 @@
         <div class="modal" id="videoModal">
             <div class="modal__content">
                 <span class="modal__close" id="closeModal">&times;</span>
-                <iframe id="modalVideo" width="1236" height="695" src="https://www.youtube.com/embed/aW70-G77F9Y" title="Iced Lavender Matcha | The Starbucks Coffee Company" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="modal-body" id="modalBody"></div>
             </div>
         </div>
         <footer class="footer">

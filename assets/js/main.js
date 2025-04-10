@@ -39,14 +39,15 @@ if  (menuLinks.length > 0) {
 
 // MODAL-VIDEO
 const openModalBtn = document.getElementById('openModal');
+const modalBody = document.getElementById('modalBody')
 const modal = document.getElementById('videoModal');
-const modalVideo = document.getElementById('modalVideo');
 const closeModalBtn = document.getElementById('closeModal');
-const videoUrl = "https://www.youtube.com/embed/aW70-G77F9Y?autoplay=1";
+
 
 openModalBtn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-    modalVideo.src = videoUrl;
+    modal.classList.add('modal--visible')
+    const videoUrl = openModalBtn.dataset.video;
+    modalBody.innerHTML = `<iframe width="1236" height="695" src="${videoUrl}" title="Iced Lavender Matcha | The Starbucks Coffee Company" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;   
 });
 
 closeModalBtn.addEventListener('click', closeModal);
@@ -58,8 +59,8 @@ window.addEventListener('click', (e) => {
 });
 
 function closeModal () {
-    modal.style.display = 'none';
-    modalVideo.src = "";
+    modal.classList.remove('modal--visible')
+    modalBody.innerHTML = '';
 }
 
 // PRODUCT-SWIPER
@@ -68,7 +69,7 @@ const swiper = new Swiper ('.swiper', {
     slidesPerView: 1.5,
     spaceBetween: 26,
     initialSlide: 0,
-    slideToClickedSlide: true,
+    slideToClickedSlide: false,
     navigation: {
         prevEl: '.swiper-btn-next',
     },
