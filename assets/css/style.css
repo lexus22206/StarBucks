@@ -1058,8 +1058,6 @@ img,
 }
 /* hover */
 @media (any-hover: hover) {
-    
-
 .section-button:hover {
     transform: scale(1.05);
 }
