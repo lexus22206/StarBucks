@@ -1,1 +1,1 @@
-# StarBucks(https://github.com/lexus22206/StarBucks)
+# StarBucks(https://lexus22206.github.io/StarBucks)
