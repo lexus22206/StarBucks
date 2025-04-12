@@ -73,16 +73,6 @@ const swiper = new Swiper ('.swiper', {
     navigation: {
         prevEl: '.swiper-btn-next',
     },
-    on: {
-        slideChange: function () {
-            document.querySelectorAll('.swiper-slide').forEach(slide => {
-                slide.classList.remove('active-slide');
-            });
-            document
-            .querySelector('.swiper-slide-next')
-            ?.classList.add('active-slide');
-        }
-    },
     breakpoints: {
         600: { slidesPerView: 2, spaceBetween: 40 },
         730: { slidesPerView: 2.5, spaceBetween: 46 },
