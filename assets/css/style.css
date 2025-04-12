@@ -590,7 +590,10 @@ img,
     width: fit-content;
     height: fit-content;
   }
-
+.swiper-card span {
+    unicode-bidi: isolate;
+    direction: ltr;
+}
 .swiper-card {
     position: relative;
     width: 100%;
