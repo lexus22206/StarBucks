@@ -303,6 +303,7 @@ img,
 }
 .header-section__badge-star {
     width: 100%;
+    height: 100%;
 }
 .header-section__badge span {
     position: absolute;
@@ -317,6 +318,7 @@ img,
 }
 .header-section__top-img {
     width: 100%;
+    height: 100%;
 }
 .header-section__bottom {
     position: relative;
@@ -414,6 +416,7 @@ img,
 }
 .header-section__bottom-image {
     width: 100%;
+    height: 100%;
     position: relative;
     z-index: 1;
 }
@@ -546,6 +549,7 @@ img,
 }
 .video-block__preview {
     width: 100%;
+    height: 100%;
     clip-path: polygon(0 0, 80% 0, 100% 30%, 100% 100%, 0 100%);
 }
 .video-block__button {
@@ -563,6 +567,8 @@ img,
     transform: translate(-50%, -50%) scale(1.05);
 }
 .video-block__button-triangle {
+    width: 26px;
+    height: 26px;
     margin-right: 12px;
 }
 /* product section */
