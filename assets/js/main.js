@@ -8,7 +8,6 @@ if (menuBurger) {
         menu.classList.toggle('header-menu--active');
     });
 }
-
 // SCROLL-TO-SECTION
 const menuLinks = document.querySelectorAll('.header-menu__link[data-goto]');
 if  (menuLinks.length > 0) {
@@ -36,33 +35,26 @@ if  (menuLinks.length > 0) {
         }
     }
 }
-
 // MODAL-VIDEO
 const openModalBtn = document.getElementById('openModal');
 const modalBody = document.getElementById('modalBody')
 const modal = document.getElementById('videoModal');
 const closeModalBtn = document.getElementById('closeModal');
-
-
 openModalBtn.addEventListener('click', () => {
     modal.classList.add('modal--visible')
     const videoUrl = openModalBtn.dataset.video;
     modalBody.innerHTML = `<iframe width="1236" height="695" src="${videoUrl}" title="Iced Lavender Matcha | The Starbucks Coffee Company" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;   
 });
-
 closeModalBtn.addEventListener('click', closeModal);
-
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
         closeModal()
     }
 });
-
 function closeModal () {
     modal.classList.remove('modal--visible')
     modalBody.innerHTML = '';
 }
-
 // PRODUCT-SWIPER
 const swiper = new Swiper ('.swiper', { 
     loop: true,  
@@ -79,11 +71,23 @@ const swiper = new Swiper ('.swiper', {
         1200: { slidesPerView: 3.5, spaceBetween: 54 }
     }
 });
-
-
-
 // SCROLL-TOP
 const scrollTop = document.getElementById('scrollTop');
 scrollTop.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth'});
 });
+// LAZY LOADING
+document.addEventListener('DOMContentLoaded', () => {
+    const lazySections = document.querySelectorAll('.lazy-bg');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.backgroundImage = `url(${entry.target.dataset.bg})`;
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+  
+    lazySections.forEach(section => observer.observe(section));
+}); 
