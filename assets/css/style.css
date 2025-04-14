@@ -1516,7 +1516,7 @@ img,
         height: 145px;
     }
     .image-block::before {
-        width: 199px;
+        width: 50px;
         height: 157px;
     }
     .content-block::after {
@@ -1562,8 +1562,9 @@ img,
         max-width: 300px;
     }
     .events-gallery {
-        gap: 14px;
+        
         margin-top: 40px;
+        padding: 0 21px;
     }
     .event {
         height: 240px;
@@ -1755,12 +1756,16 @@ img,
         width: 80px;
     }
     .events-section {
+        overflow: hidden;
         background-position: left 23vw;
     }
     .events-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+    .events-gallery {
+        gap: 24px 0;
     }
     .event {
         height: 180px;
@@ -1818,6 +1823,13 @@ img,
     }
     .events-section {
         background-position: left 31vw;
+    }
+    .events-gallery {
+        gap: 15px 0;
+    }
+    .event__overlay {
+        left: 12px;
+        bottom: 12px;
     }
 }
 @media (max-width: 420px) {
