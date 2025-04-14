@@ -42,8 +42,13 @@ const modal = document.getElementById('videoModal');
 const closeModalBtn = document.getElementById('closeModal');
 openModalBtn.addEventListener('click', () => {
     modal.classList.add('modal--visible')
-    const videoUrl = openModalBtn.dataset.video;
-    modalBody.innerHTML = `<iframe width="1083" height="695" src="${videoUrl}" title="Iced Lavender Matcha | The Starbucks Coffee Company" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;   
+    let videoUrl = openModalBtn.dataset.video;
+    if (videoUrl.includes('?')) {
+        videoUrl += '&autoplay=1';
+    } else {
+        videoUrl += '?autoplay=1'
+    }
+    modalBody.innerHTML = `<iframe width="1236" height="695" src="${videoUrl}" title="Iced Lavender Matcha | The Starbucks Coffee Company" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;   
 });
 closeModalBtn.addEventListener('click', closeModal);
 window.addEventListener('click', (e) => {
